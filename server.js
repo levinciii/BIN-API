@@ -1,20 +1,21 @@
 require('dotenv').config()
 
 const express = require('express')
+const patientRoutes = require('./routes/patient')
 
 // BIN-API
 const bin = express()
 
 // Middleware
+bin.use(express.json())
+
 bin.use((req, res, next) => {
     console.log(req.path, req.method)
     next()
 })
 
 // Routes
-bin.get('/', (req, res) => {
-    res.json({message: 'Welcome to BIN-API'})
-})
+bin.use('/bin/patients', patientRoutes)
 
 // Listen for requests
 bin.listen(process.env.PORT, () => {
