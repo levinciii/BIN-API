@@ -1,2 +1,22 @@
-# bin-api
- API for Dental Clinic Appointment System, created using MongoDB, and Express.
+# BIN-API
+API for Dental Clinic Appointment System, created using MongoDB, and Express.
+
+# API Development
+### You must have installed:
+  
+> nodejs (https://nodejs.org/en/download)
+
+> express (npm install express)
+
+> nodemon (npm install -g nodemon)
+
+> dotenv (npm install dotenv)
+
+> mongoose (npm install mongoose)
+
+### To run this specific API, type in your terminal 'npm run bin'.
+If you want to change this, go to 'package.json' and create a new script or edit the script that I have by default.
+
+The below image is my default script. You can change it depending on your preferences.
+
+![image](./readme/script.jpg)
