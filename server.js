@@ -1,6 +1,7 @@
 require('dotenv').config()
 
 const express = require('express')
+const mongoose = require('mongoose')
 const patientRoutes = require('./routes/patient')
 
 // BIN-API
@@ -17,7 +18,12 @@ bin.use((req, res, next) => {
 // Routes
 bin.use('/bin/patients', patientRoutes)
 
-// Listen for requests
-bin.listen(process.env.PORT, () => {
-    console.log('Listening on port', process.env.PORT)
+// Connect to DB  
+mongoose.connect(process.env.MONGO_URI).then(() => {
+    // Listen for requests
+    bin.listen(process.env.PORT, () => {
+        console.log('Connected to DB & Listening on port', process.env.PORT)
+    })
+}).catch((error) => {
+    console.log(error)
 })
