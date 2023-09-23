@@ -1,5 +1,5 @@
-# BIN-API
-API for Dental Clinic Appointment System, created using MongoDB, and Express.
+# BIN-API-DCAS
+BIN-API (Basic Interconnected Node API) for Dental Clinic Appointment System, created using MongoDB, and Express.
 
 # API Development
 ### You must have installed:
