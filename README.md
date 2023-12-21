@@ -14,6 +14,8 @@ BIN-API (Basic Interconnected Node API) for Dental Clinic Appointment System, cr
 
 > mongoose (npm install mongoose)
 
+> cors (npm install cors)
+
 ### To run this specific API, type in your terminal 'npm run bin'.
 If you want to change this, go to 'package.json' and create a new script or edit the script that I have by default.
 
