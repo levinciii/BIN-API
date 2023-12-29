@@ -8,14 +8,14 @@ const PatientSchema = new Schema({
       mname: {type: String, required: true},
       lname: {type: String, required: true},
     },
-    birthdate: {type: String, required: true},
-    age: {type: String, required: true},
+    birthdate: {type: Date, required: true},
+    age: {type: Number, required: true},
     contact_details: {
       phone_num: {type: String, required: true},
       email: {type: String, required: true},
     },
     appointment: {
-      date: {type: String, required: true},
+      date: {type: Date, required: true},
       time: {type: String, required: true},
     }
 }, {timestamps: true})
