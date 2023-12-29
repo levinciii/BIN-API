@@ -15,8 +15,7 @@ const PatientSchema = new Schema({
       email: {type: String, required: true},
     },
     appointment: {
-      date: {type: Date, required: true},
-      time: {type: String, required: true},
+      datetime: {type: String, required: true}
     }
 }, {timestamps: true})
 

@@ -28,7 +28,7 @@ const createPatient = async (req, res) => {
         birthdate,
         age,
         contact_details: {phone_num, email},
-        appointment: {date, time}
+        appointment: {datetime}
     } = req.body
 
     try {
@@ -37,7 +37,7 @@ const createPatient = async (req, res) => {
             birthdate,
             age,
             contact_details: {phone_num, email},
-            appointment: {date, time}
+            appointment: {datetime}
         })
         res.status(200).json(patient)
     } catch (error) {
