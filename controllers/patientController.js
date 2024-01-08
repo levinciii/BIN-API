@@ -30,6 +30,36 @@ const createPatient = async (req, res) => {
         contact_details: {phone_num, email},
         appointment: {datetime}
     } = req.body
+    
+    let emptyFields = []
+
+    if(!fname) {
+        emptyFields.push('fname')
+    }
+    if(!mname) {
+        emptyFields.push('mname')
+    }
+    if(!lname) {
+        emptyFields.push('lname')
+    }
+    if(!birthdate) {
+        emptyFields.push('birthdate')
+    }
+    if(!age) {
+        emptyFields.push('age')
+    }
+    if(!phone_num) {
+        emptyFields.push('phone_num')
+    }
+    if(!email) {
+        emptyFields.push('email')
+    }
+    if(!datetime) {
+        emptyFields.push('datetime')
+    }
+    if(emptyFields.length > 0) {
+        return res.status(400).json({error: 'Please fill in all the fields', emptyFields})
+    }
 
     try {
         const patient = await Patient.create({
