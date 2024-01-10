@@ -3,6 +3,7 @@ require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const patientRoutes = require('./routes/patient')
+const userRoutes = require('./routes/user')
 
 // BIN-API
 const bin = express()
@@ -17,6 +18,7 @@ bin.use((req, res, next) => {
 
 // Routes
 bin.use('/bin/patients', patientRoutes)
+bin.use('/bin/user', userRoutes)
 
 // Connect to DB  
 mongoose.connect(process.env.MONGO_URI).then(() => {
