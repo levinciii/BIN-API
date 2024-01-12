@@ -18,7 +18,7 @@ bin.use((req, res, next) => {
 
 // Routes
 bin.use('/bin/patients', patientRoutes)
-bin.use('/bin/user', userRoutes)
+bin.use('/bin/users', userRoutes)
 
 // Connect to DB  
 mongoose.connect(process.env.MONGO_URI).then(() => {
