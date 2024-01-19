@@ -16,7 +16,8 @@ const PatientSchema = new Schema({
     },
     appointment: {
       datetime: {type: String, required: true}
-    }
+    },
+    user_id: {type: String, brequired: true}
 }, {timestamps: true})
 
 module.exports = mongoose.model('Patient', PatientSchema)
